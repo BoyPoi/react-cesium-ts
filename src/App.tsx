@@ -1,5 +1,4 @@
-import React, { Component, RefObject, createRef, ReactNode } from 'react';
-import logo from './logo.svg';
+import React, { Component, ReactNode } from 'react';
 import './App.css';
 import styled, { AnyStyledComponent } from 'styled-components';
 import { Viewer } from 'cesium';

@@ -42,3 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 关于配置地址来自
+
+https://medium.com/@lhviet88/how-to-setup-cesiumjs-to-use-in-reactjs-webpack-and-typescript-a9cd8378f129

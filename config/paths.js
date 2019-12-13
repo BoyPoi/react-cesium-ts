@@ -3,11 +3,13 @@
 const path = require('path');
 const fs = require('fs');
 const url = require('url');
+const process = require('process');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
+const pathBuilder = (subpath) => path.join(process.cwd(), subpath);
 
 const envPublicUrl = process.env.PUBLIC_URL;
 
@@ -83,6 +85,10 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  cesiumSource: pathBuilder('node_modules/cesium/Source'),
+  cesiumSourceAssets: pathBuilder('node_modules/cesium/Source/Assets'),
+  cesiumSourceWidgets: pathBuilder('node_modules/cesium/Source/Widgets'),
+  cesiumWorkers: pathBuilder('node_modules/cesium/Build/Cesium/Workers'),
 };
 
 
